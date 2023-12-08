@@ -55,7 +55,16 @@ const stylesArray = [
       button.style.top = newPositionY + 'px';
     }, interval);
   }
-     
+
+  function changeFontSize() {
+    const body = document.body;
+    const minFontSize = 10;
+    const maxFontSize = 60;
+  
+    const randomFontSize = Math.floor(Math.random() * (maxFontSize - minFontSize + 1)) + minFontSize;
+    body.style.fontSize = randomFontSize + 'px';
+  }
+       
   window.onload = function() {
     applyRandomStyle();
     moveButtonRandomly(); 
