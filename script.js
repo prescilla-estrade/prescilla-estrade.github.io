@@ -41,6 +41,24 @@ const stylesArray = [
       isDarkMode = false;
     }
   }
-   
-  window.onload = applyRandomStyle;
+
+  function moveButtonRandomly() {
+    const button = document.querySelector('button');
+    const interval = 1000; 
+  
+    setInterval(() => {
+      const newPositionX = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+      const newPositionY = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+  
+      button.style.position = 'absolute';
+      button.style.left = newPositionX + 'px';
+      button.style.top = newPositionY + 'px';
+    }, interval);
+  }
+     
+  window.onload = function() {
+    applyRandomStyle();
+    moveButtonRandomly(); 
+  };
+  
   
