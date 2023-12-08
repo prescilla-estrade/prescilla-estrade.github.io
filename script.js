@@ -97,11 +97,28 @@ const stylesArray = [
     button.style.backgroundColor = randomColor;
   }
     
+  function changeEmojiImage() {
+    const emojiImages = [
+      'emoji1.webp',
+      'gif.gif',
+      'gif1.gif',
+      'gif2.gif',
+      'gif3.gif'
+    ];
+  
+    const randomIndex = Math.floor(Math.random() * emojiImages.length);
+    const randomImage = emojiImages[randomIndex];
+    const emojiElement = document.getElementById('emojiImage');
+    emojiElement.src = randomImage;
+  }
+  
   window.onload = function() {
     applyRandomStyle();
     moveButtonRandomly(); 
     changeButtonColor();
+    changeEmojiImage(); 
   };
+  
   
   
   
