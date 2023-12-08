@@ -65,6 +65,32 @@ const stylesArray = [
     body.style.fontSize = randomFontSize + 'px';
   }
        
+  function changeFontFamily() {
+    const fontsArray = [
+        'Arial, sans-serif',
+        'Verdana, sans-serif',
+        'Georgia, serif',
+        'Times New Roman, serif',
+        'Courier New, monospace',
+        'Comic Sans MS, cursive',
+        'Impact, fantasy',
+        'Garamond, serif',
+        'Lucida Console, monospace',
+        'Brush Script MT, cursive',
+        'Trebuchet MS, sans-serif',
+        'Palatino Linotype, serif',
+        'Consolas, monospace',
+        'Copperplate, fantasy',
+        'Century Gothic, sans-serif'
+      ];
+        
+    const body = document.body;
+    const randomFontIndex = Math.floor(Math.random() * fontsArray.length);
+    const randomFont = fontsArray[randomFontIndex];
+  
+    body.style.fontFamily = randomFont;
+  }
+  
   window.onload = function() {
     applyRandomStyle();
     moveButtonRandomly(); 
