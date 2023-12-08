@@ -41,7 +41,7 @@ const stylesArray = [
       isDarkMode = false;
     }
   }
-
+  
   function moveButtonRandomly() {
     const button = document.querySelector('button');
     const interval = 1000; 
@@ -90,10 +90,18 @@ const stylesArray = [
   
     body.style.fontFamily = randomFont;
   }
-  
+
+  function changeButtonColor() {
+    const button = document.querySelector('button');
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16); // Génère une couleur hexadécimale aléatoire
+    button.style.backgroundColor = randomColor;
+  }
+    
   window.onload = function() {
     applyRandomStyle();
     moveButtonRandomly(); 
+    changeButtonColor();
   };
+  
   
   
