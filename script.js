@@ -31,12 +31,10 @@ const stylesArray = [
     const body = document.body;
   
     if (!isDarkMode) {
-      // Mode sombre
       body.style.backgroundColor = '#000';
       body.style.color = '#fff';
       isDarkMode = true;
     } else {
-      // Mode aléatoire
       applyRandomStyle();
       isDarkMode = false;
     }
